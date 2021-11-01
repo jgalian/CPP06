@@ -1,18 +1,12 @@
-NAME =	bureaucrat
+NAME =	cast
 
-SRC =	main.cpp \
-		Bureaucrat.cpp \
-		AForm.cpp \
-		PresidentialPardonForm.cpp \
-		RobotomyRequestForm.cpp \
-		ShrubberyCreationForm.cpp \
-		Intern.cpp
+SRC =	main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 INC = -I.
 
-CXXFLAGS = -Wall -Wextra -Werror -g -Wshadow -std=c++98 $(INC) $(SANITIZE) $(DEBUG)
-CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -g -Wshadow -std=c++11 $(INC) $(SANITIZE) $(DEBUG)
+CXX = clang++
 
 SANITIZE =
 SANITIZE_FLAGS = -g3 -fsanitize=address
